@@ -1,0 +1,7 @@
+node_modules/
+fff/
+.env
+env
+__pycache__/*
+__pycache__/
+

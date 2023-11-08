@@ -1,0 +1,46 @@
+project_root:  # The root directory of the project
+  - docs:  # Contains documentation and notes for the project
+      - README.md  # Introduction and setup instructions for the project
+      - CONTRIBUTING.md  # Guidelines for how to contribute to the project
+  - src:  # Source code of the project
+      - main.py  # The starting point of the application
+      - api:  # FastAPI application components
+          - __init__.py  # Initializes the api module
+          - main.py  # Initializes the FastAPI application
+          - dependencies.py  # Dependency injection for FastAPI
+          - routers:  # API routers for different endpoints
+              - __init__.py
+              - users.py  # User-related route handlers
+              - stories.py  # User stories route handlers
+      - core:  # Core logic of the application
+          - __init__.py
+          - parser.py  # Parses user stories and scenarios
+          - summarizer.py  # Summarizes user stories and scenarios using LLM
+      - models:  # Pydantic models for data validation
+          - __init__.py
+          - user_story.py  # User story data validation model
+          - scenario.py  # Scenario data validation model
+          - feature_file.py  # Feature file data structure
+      - utils:  # Utility functions and classes
+          - __init__.py
+          - vectorizer.py  # Handles the vectorization of text data
+          - db_connector.py  # Connects to MongoDB database
+  - tests:  # Test suite for the application
+      - __init__.py
+      - test_parser.py  # Tests for the parser module
+      - test_summarizer.py  # Tests for the summarizer module
+  - .github:  # Configuration for GitHub repositories
+      - workflows:  # GitHub Actions workflows for CI/CD
+          - ci.yml  # Continuous Integration workflow
+          - cd.yml  # Continuous Deployment workflow
+  - node_modules:  # Node.js packages for the Cypress integration
+      - cypress  # The Cypress end-to-end test framework
+      - cucumber-preprocessor  # Plugin for supporting Cucumber in Cypress
+  - frontend:  # Frontend code for the Streamlit application
+      - streamlit_app.py  # Streamlit application for user interactions
+  - db:  # Local development databases
+      - mongo_data:  # Local MongoDB data storage
+      - qdrant_data:  # Local Qdrant vector database storage
+  - .env  # Environment variables configuration file
+  - Dockerfile  # Docker configuration for building the application image
+  - docker-compose.yml  # Docker Compose configuration for running multi-container applications
