@@ -1,0 +1,34 @@
+.
+├── Dockerfile
+├── README.md
+├── db
+│   ├── mongo_data
+│   └── qdrant_data
+├── docker-compose.yml
+├── docs
+│   └── CONTRIBUTING.md
+├── folder_structure.py
+├── frontend
+│   └── streamlit_app.py
+├── pyproject.toml
+├── requirements.txt
+├── setup.py
+├── src
+│   ├── api
+│   │   └── routers
+│   ├── core
+│   ├── main.py
+│   ├── models
+│   └── utils
+├── test_env
+│   ├── cypress
+│   │   ├── cypress.json
+│   │   └── support
+│   │       ├── commands.ts
+│   │       └── index.ts
+│   ├── package-lock.json
+│   ├── package.json
+│   └── requirements.txt
+└── tests
+
+16 directories, 16 files

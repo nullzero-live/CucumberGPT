@@ -1,0 +1,30 @@
+{
+    "name": "cucumbergpt",
+    "version": "0.0.1",
+    "description": "Leveraging LLM's to make user stories, feature files and Cypress test files",
+    "main": "index.js",
+    "scripts": {
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run",
+        "lint": "eslint . --ext .ts",
+        "tsc": "tsc",
+        "build": "tsc -p .",
+        "dev": "npm run dev"
+    },
+    "author": "Aylex Riom",
+    "license": "MIT",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.0.0",
+        "@typescript-eslint/parser": "^5.0.0",
+        "cypress": "^13.5.0",
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "eslint-plugin-cypress": "^2.12.1",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.1.0"
+    },
+    "dependencies": {
+        "typescript": "^5.2.2",
+        "typescript-eslint": "^0.0.1-alpha.0"
+    }
+}
