@@ -1,5 +1,5 @@
-# Use a specific digest for reproducibility
-FROM python:3.10-slim@sha256:digest_here
+
+FROM python:3.10-slim
 
 # Create a non-root user to run the application
 RUN useradd -m appuser
