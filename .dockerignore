@@ -1,0 +1,10 @@
+./test_env/node_modules/
+/test_env_node_modules/
+node_modules/*.*
+fff/
+.env
+env
+__pycache__/*
+__pycache__/
+test_env/node_modules/
+_arc/
