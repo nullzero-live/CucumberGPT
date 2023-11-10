@@ -19,6 +19,6 @@ Contributions are welcome. Please fork the repository, make your changes, and su
 To set up the project in developer mode:
 
 ```bash
-git clone [https://github.com/your-repo/project-name.git](https://github.com/nullzero-live/CucumberGPT)https://github.com/nullzero-live/CucumberGPT
+git clone https://github.com/nullzero-live/CucumberGPT
 cd CucumberGPT
 pip install -e .
