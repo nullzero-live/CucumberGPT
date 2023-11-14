@@ -4,4 +4,8 @@ env/
 fff/
 parse_feature_files/node_modules/*
 /parse_feature_files/node_modules/*/
+.internal/
+/.internal/*
+/src/core/wandb/
+
  

@@ -31,7 +31,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# This is a simple not production-ready way to handle passwords!
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
@@ -89,7 +89,7 @@ async def sign_up(user: User):
             detail="User ID already registered"
         )
     hashed_password = get_password_hash(user.password)
-    user_dict = user.dict()
+    user_dict = user.model_dump()
     user_dict['hashed_password'] = hashed_password
     del user_dict['password']
     users_collection.insert_one(user_dict)
