@@ -4,8 +4,8 @@ from prettytable import PrettyTable
 from termcolor import colored
 
 def setup_logger(name):
-    logger = logging.getLogger(name)
-    logger.setLevel(logging.DEBUG)
+    _logger = logging.getLogger(name)
+    _logger.setLevel(logging.DEBUG)
     
     handlers = [
         {"cls": logging.StreamHandler, "level": logging.DEBUG, "fmt": '%(name)s - %(levelname)s - %(message)s'},
@@ -16,9 +16,9 @@ def setup_logger(name):
         handler = h["cls"](**{k: v for k, v in h.items() if k != "cls" and k != "level" and k != "fmt"})
         handler.setLevel(h["level"])
         handler.setFormatter(logging.Formatter(h["fmt"]))
-        logger.addHandler(handler)
+        _logger.addHandler(handler)
     
-    return logger
+    return _logger
 
 def pretty_print(data, title):
     table = PrettyTable()
@@ -36,7 +36,3 @@ def log_all_levels(logger):
     logger.error("This is an error message")
     logger.critical("This is a critical message")
 
-'''if __name__ == "__main__":
-    logger = setup_logger('MyApp')
-    pretty_print({"Agent": "Research Agent", "Status": "Success"}, "Summary")
-    log_all_levels(logger)'''
