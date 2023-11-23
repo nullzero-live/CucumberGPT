@@ -11,12 +11,11 @@ from datetime import datetime
 
 
 #Logging etc
-#from gen_logger.logger_util import setup_logger
+from utils.logger import setup_logger
 from langchain.globals import set_verbose, set_debug
 from langchain.callbacks import WandbCallbackHandler, StdOutCallbackHandler  
 from langchain.callbacks import wandb_tracing_enabled
-#from logs.wandb_langchain import wandb_callback
-#from wandb_langchain import wandb_callback, callbacks
+
 import textstat
 import spacy
 
@@ -32,13 +31,9 @@ from langchain.schema.messages import HumanMessage, SystemMessage
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnableMap, RunnablePassthrough
 
-#from humanloop import Humanloop
-
-
 #Input placeholders 
-
 load_dotenv()
-#_logger=setup_logger("langllm")
+_logger=setup_logger("langllm")
 os.environ["LANGCHAIN_WANDB_TRACING"] = "true"
 os.environ["WANDB_PROJECT"] = "avin-midi"
 #humanloop = Humanloop(api_key=os.getenv("HUMANLOOP_API_KEY"))
